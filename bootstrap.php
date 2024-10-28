@@ -10,7 +10,7 @@ tap($app->make(Kernel::class))->bootstrap();
 // ¡RECUERDA EJECUTAR ESTE FICHERO AÑADIÉNDOLO A LA PROPIEDAD 'bootstrap' DE <phpunit> EN EL FICHERO DE CONFIGURACIÓN PHPUNIT.XML! (ej: bootstrap="tests/Utils/bootstrap.php")
 
 $semilla = random_int(1, 1000000);
-$faker = Container::getInstance()->make(Generator::class);
+$faker = $app->make(Generator::class);
 $faker->seed($semilla);
 registrarSemillaFaker($semilla);
 
