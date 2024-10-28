@@ -1,7 +1,6 @@
 <?php
 
 use Faker\Generator;
-use Illuminate\Container\Container;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 $app = require __DIR__ . '/../../bootstrap/app.php';
@@ -32,7 +31,7 @@ function registrarSemillaFaker(int $semilla): void
 // A DIFERENCIA DEL ANTERIOR CÓDIGO, SÓLO REGISTRA LAS ÚLTIMAS 30 SEMILLAS
 
 $semilla = random_int(1, 1000000);
-$faker = Container::getInstance()->make(Generator::class);
+$faker = $app->make(Generator::class);
 $faker->seed($semilla);
 registrarSemillaFaker($semilla);
 
