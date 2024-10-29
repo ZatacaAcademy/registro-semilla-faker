@@ -2,12 +2,12 @@
 
 use Faker\Generator;
 
+// ¡RECUERDA EJECUTAR ESTE FICHERO AÑADIÉNDOLO A LA PROPIEDAD 'bootstrap' DE <phpunit> EN EL FICHERO DE CONFIGURACIÓN PHPUNIT.XML! (ej: bootstrap="tests/Utils/bootstrap.php")
+
 require_once __DIR__ . '/../../vendor/autoload.php';
 $app = require __DIR__ . '/../../bootstrap/app.php';
 $consoleKernel = $app->make(Kernel::class);
 $consoleKernel->bootstrap();
-
-// ¡RECUERDA EJECUTAR ESTE FICHERO AÑADIÉNDOLO A LA PROPIEDAD 'bootstrap' DE <phpunit> EN EL FICHERO DE CONFIGURACIÓN PHPUNIT.XML! (ej: bootstrap="tests/Utils/bootstrap.php")
 
 $semilla = random_int(1, 1000000);
 $faker = $app->make(Generator::class);
