@@ -4,7 +4,8 @@ use Faker\Generator;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 $app = require __DIR__ . '/../../bootstrap/app.php';
-tap($app->make(Kernel::class))->bootstrap();
+$consoleKernel = $app->make(Kernel::class);
+$consoleKernel->bootstrap();
 
 // ¡RECUERDA EJECUTAR ESTE FICHERO AÑADIÉNDOLO A LA PROPIEDAD 'bootstrap' DE <phpunit> EN EL FICHERO DE CONFIGURACIÓN PHPUNIT.XML! (ej: bootstrap="tests/Utils/bootstrap.php")
 
