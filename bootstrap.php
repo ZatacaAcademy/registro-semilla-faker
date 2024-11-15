@@ -1,6 +1,7 @@
 <?php
 
 use Faker\Generator;
+use Illuminate\Contracts\Console\Kernel;
 
 // ¡RECUERDA EJECUTAR ESTE FICHERO AÑADIÉNDOLO A LA PROPIEDAD 'bootstrap' DE <phpunit> EN EL FICHERO DE CONFIGURACIÓN PHPUNIT.XML! (ej: bootstrap="tests/Utils/bootstrap.php")
 
